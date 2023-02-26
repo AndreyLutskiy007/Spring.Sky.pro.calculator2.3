@@ -15,10 +15,6 @@ public class CalculatorService {
 
     }
 
-    public String answerNum2(String num2) {
-        return num2;
-    }
-
     public String answerMinusNumber(int num1, int num2) {
         int res = num1 - num2;
         return num1 + "-" + num2 + "=" + res;
