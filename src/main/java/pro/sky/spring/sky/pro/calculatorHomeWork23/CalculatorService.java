@@ -28,10 +28,12 @@ public class CalculatorService {
     public String answerDivideNumber(int num1, int num2) {
         int res;
         if (num2 == 0) {
-            return "Error: на ноль делить нельзя";
+            return "Делить на ноль нельзя";
         } else {
             res = num1 / num2;
-            return num1 + "/" + num2 + "=" + res;
         }
+        return num1 + "/" + num2 + "=" + res;
     }
 }
+
+
