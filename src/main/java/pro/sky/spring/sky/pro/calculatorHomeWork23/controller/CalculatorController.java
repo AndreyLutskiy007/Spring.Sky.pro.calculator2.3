@@ -7,7 +7,7 @@ import pro.sky.spring.sky.pro.calculatorHomeWork23.service.CalculatorService;
 @RestController
 @RequestMapping("/calculator")
 public class CalculatorController {
-    public CalculatorService calculatorService;
+    private final CalculatorService calculatorService;
 
     public CalculatorController(CalculatorService calculatorService) {
         this.calculatorService = calculatorService;
@@ -45,8 +45,9 @@ public class CalculatorController {
             int res = calculatorService.divide(num1, num2);
             return num1 + "*" + num2 + "=" + res;
         } catch (DivisionByZeroException e) {
-
             return " на ноль делить нельзя";
+        } catch (Exception e) {
+            return "попробуйте другое действие";
         }
     }
 }
